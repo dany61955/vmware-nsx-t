@@ -36,17 +36,14 @@ make a list for more than one
 
 
 ## 📌 Key Fixes for NSX-T
-✅ Fixed the API URL for IP Sets → IP_OBJECTS_API_URL now uses /infra/ip-sets/{id}
-✅ Corrected API structure to align with NSX-T Policy API
-✅ Uses verify=False (disable SSL verification, but consider enabling it in production)
+_Fixed the API URL for IP Sets in NSX T varient → IP_OBJECTS_API_URL now uses /infra/ip-sets/{id}_
+_Uses verify=False (disable SSL verification, but consider enabling it in production)_
 
 
 
-## 🚀 Next Steps
-Test with your NSX-T environment using actual IPs.
-Enable SSL verification by replacing verify=False with verify='/path/to/cert.pem'.
-Logging and Debugging: Add logging to capture API responses for troubleshooting.
-Would you like this script to support dynamic domains instead of just default? 🚀
+## Support and troubleshooting
+_Enable SSL verification by replacing verify=False with verify='/path/to/cert.pem'._
+_Logging and Debugging: Add logging to capture API responses for troubleshooting._
 
 
 
