@@ -36,9 +36,9 @@ def create_ip_sets(ip_sets):
         )
 
         if response.status_code in [200, 201]:
-            print(f"✅ IP Set '{ip_set['name']}' created successfully!")
+            print(f"IP Set '{ip_set['name']}' created successfully!")
         else:
-            print(f"❌ Failed to create IP Set '{ip_set['name']}': {response.text}")
+            print(f"Failed to create IP Set '{ip_set['name']}': {response.text}")
 
 # Function to create Groups in NSX-T
 def create_groups(groups):
@@ -68,7 +68,7 @@ def create_groups(groups):
                 ip_data = response.json()
                 group_payload["expression"][0]["ip_addresses"].extend(ip_data.get("ip_addresses", []))
             else:
-                print(f"⚠️ Warning: IP Set '{ip_set_id}' not found!")
+                print(f"Warning: IP Set '{ip_set_id}' not found!")
 
         # Create the group
         response = requests.put(
@@ -80,9 +80,9 @@ def create_groups(groups):
         )
 
         if response.status_code in [200, 201]:
-            print(f"✅ Group '{group['name']}' created successfully!")
+            print(f"Group '{group['name']}' created successfully!")
         else:
-            print(f"❌ Failed to create Group '{group['name']}': {response.text}")
+            print(f"Failed to create Group '{group['name']}': {response.text}")
 
 # Load data from files
 ip_sets = load_json_file("ip_objects.json")
