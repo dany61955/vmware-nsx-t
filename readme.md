@@ -9,6 +9,7 @@ group_name:x.x.x.x,y.y.y.y
 
 eg.
 Web_Servers:192.168.1.10,192.168.1.11
+
 DB_Servers:10.10.10.5,10.10.10.6
 
 
