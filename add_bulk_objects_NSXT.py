@@ -39,7 +39,7 @@ def create_groups(groups):
             ]
         }
 
-        response = requests.patch(
+        response = requests.put(
             f"{GROUPS_API_URL}/{group['id']}",
             auth=HTTPBasicAuth(USERNAME, PASSWORD),
             headers={"Content-Type": "application/json"},
